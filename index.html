@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,3 +16,20 @@
     <h1 class="text-center mt-3">Gestione Incidenti</h1>
     <!-- selezione categoria [ NAV BAR ]-->
     <div class="container mt-3"><div id="navbar" class="btn-group mt-3" role="group" aria-label="Basic radio toggle button group"></div></div>
+
+    <div id="outputform"></div>
+    <div class="container mt-3 d-flex justify-content-end">
+    
+    <!-- Bottone trigger -->
+        <button id="bottoneAggiungi" type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Inserisci incidente</button>
+    <!-- Modale incidente -->
+        <div class="modal fade modalltop" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Incidenti</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="form" class="modal-body">
+                    
+                </div>
