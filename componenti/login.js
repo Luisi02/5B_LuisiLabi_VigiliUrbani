@@ -3,6 +3,10 @@ function login () {
     password = document.getElementById("password").value;
     console.log('Try to login', username, password);
 
+    const data = {
+        password: password,
+        username: username
+    }
     
 }
 
