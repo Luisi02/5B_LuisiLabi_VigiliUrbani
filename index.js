@@ -48,10 +48,13 @@ fetch("conf.json")
         navBarComp.setParentElement(navbar);
         navBarComp.render(form, table1);
     });
+    //Controlla se è loggato con la funzione checkLogin
     if (checkLogin()) {
+      //Se è loggato nasconde il pulsante login e fa vedere il pulsante aggiungi incidente
         document.getElementById('bottoneAggiungi').style.display = 'flex'; 
         document.getElementById('bottoneLogin').style.display  = "none";
       }else{
+        //Se non è loggato fa vedere il pulsante login e nasconde il pulsante aggiungi incidente
         document.getElementById('bottoneAggiungi').style.display  = "none"; 
         document.getElementById('bottoneLogin').style.display = 'flex';  
       }
