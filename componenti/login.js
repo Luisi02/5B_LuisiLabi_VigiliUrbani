@@ -7,6 +7,10 @@ function login () {
         password: password,
         username: username
     }
-    
+    fetch("conf.json")
+    .then((r) => r.json())
+    .then((conf) => {
+        console.log(conf.cacheToken);
+    });
 }
 
