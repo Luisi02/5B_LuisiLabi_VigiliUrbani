@@ -48,4 +48,11 @@ fetch("conf.json")
         navBarComp.setParentElement(navbar);
         navBarComp.render(form, table1);
     });
+    if (checkLogin()) {
+        document.getElementById('bottoneAggiungi').style.display = 'flex'; 
+        document.getElementById('bottoneLogin').style.display  = "none";
+      }else{
+        document.getElementById('bottoneAggiungi').style.display  = "none"; 
+        document.getElementById('bottoneLogin').style.display = 'flex';  
+      }
 
