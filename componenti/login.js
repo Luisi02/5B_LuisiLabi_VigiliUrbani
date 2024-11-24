@@ -12,5 +12,26 @@ function login () {
     .then((conf) => {
         console.log(conf.cacheToken);
     });
-}
+    fetch("https://ws.cipiaceinfo.it/credential/login",{
+        method: 'POST',
+        headers: {
+            "content-type": "application/json",
+            "key": conf.cacheToken,
+        },
+        body: JSON.stringify(data)
+    })
+    .then((r) => r.json())
+    .then((response) => {
+        if (response.result){
+            document.getElementById('bottoneAggiungi').style.display = 'flex'; 
+            document.getElementById('bottoneLogin').style.display  = "none";
+            sessionStorage.setItem("mattiaLogin","utenteLoggato")
+            alert("Login effettuato con successo!");
+        }else{
+            alert("ERRORE DURANTE IL LOGIN!")
+            console.log(response.result);
+        }
+    });
+};
+
 
